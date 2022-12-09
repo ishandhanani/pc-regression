@@ -16,5 +16,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/ishandhanani/pcregression"
-"Bug Tracker" = "https://github.com/ishandhanani/pcregression/issues"
+"Homepage" = "https://github.com/ishandhanani/pc-regression"
+"Bug Tracker" = "https://github.com/ishandhanani/pc-regression/issues"
