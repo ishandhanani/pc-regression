@@ -3,6 +3,7 @@ from sklearn.decomposition import PCA
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import StandardScaler
 
+
 class PCARegression(BaseEstimator, RegressorMixin):
     """
     Principal Component Regression
@@ -16,13 +17,14 @@ class PCARegression(BaseEstimator, RegressorMixin):
     Parameters
     ----------
     n_components: int, default=2
-        The number of principal components 
+        The number of principal components
     reg_type: str, default='ols'
         The type of regression. Only OLS is supported for now.
         Pulled from LinearRegression() in sklearn
     **kwarge: str
         Additional arguments for regression
     """
+
     def __init__(self, n_components=2):
         self.lm = LinearRegression()
         self.n_components = n_components
@@ -32,13 +34,13 @@ class PCARegression(BaseEstimator, RegressorMixin):
     def __name__(self):
         pass
 
-    def fit(self,X,y=None):
+    def fit(self, X, y=None):
         scaledX = self.ss.fit_transform(X)
         xpca = self.pca.fit_transform(scaledX)
-        self.lm.fit(xpca,y)
+        self.lm.fit(xpca, y)
         return self
 
-    def predict(self,X,y=None):
+    def predict(self, X, y=None):
         scaledX = self.ss.fit_transform(X)
         xpca = self.pca.fit_transform(scaledX)
         preds = self.lm.predict(xpca)
