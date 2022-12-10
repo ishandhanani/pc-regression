@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "pc_regression"
 version = "0.0.1"
 authors = [{name="Ishan Dhanani", email="ishandhanani@gmail.com"}]
-description = "A package for principal component regression. Basically a way to practice creating packages in Python"
+description = "A package for principal component regression. A way to practice building packages and deploying them onto pypi"
 readme = "README.md"
 requires-python = ">3.7"
 classifiers = [

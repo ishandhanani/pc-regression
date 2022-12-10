@@ -4,6 +4,7 @@ pyproject.toml
 pc_regression.egg-info/PKG-INFO
 pc_regression.egg-info/SOURCES.txt
 pc_regression.egg-info/dependency_links.txt
+pc_regression.egg-info/requires.txt
 pc_regression.egg-info/top_level.txt
 pcregression/__init__.py
 pcregression/pcregression.py
