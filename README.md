@@ -1,3 +1,3 @@
 # Principal Component Regression
 
-This is a package I developed to practice creating a full package in Python.
+Principal component regresion allows a user to perform PCA and Linear Regression at once.

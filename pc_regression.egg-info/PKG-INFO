@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: pc-regression
-Version: 0.0.1
-Summary: A package for principal component regression. Basically a way to practice creating packages in Python
+Version: 0.0.2
+Summary: A package for principal component regression. A way to practice building packages and deploying them onto pypi
 Author-email: Ishan Dhanani <ishandhanani@gmail.com>
 Project-URL: Homepage, https://github.com/ishandhanani/pc-regression
 Project-URL: Bug Tracker, https://github.com/ishandhanani/pc-regression/issues
@@ -14,4 +14,4 @@ License-File: LICENSE.txt
 
 # Principal Component Regression
 
-This is a package I developed to practice creating a full package in Python.
+Principal component regresion allows a user to perform PCA and Linear Regression at once.
