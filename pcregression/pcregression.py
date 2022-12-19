@@ -1,3 +1,5 @@
+import typing
+import numpy as np
 from sklearn.base import BaseEstimator, RegressorMixin
 from sklearn.decomposition import PCA
 from sklearn.linear_model import LinearRegression
@@ -18,29 +20,24 @@ class PCARegression(BaseEstimator, RegressorMixin):
     ----------
     n_components: int, default=2
         The number of principal components
-    reg_type: str, default='ols'
-        The type of regression. Only OLS is supported for now.
-        Pulled from LinearRegression() in sklearn
-    **kwarge: str
-        Additional arguments for regression
     """
 
-    def __init__(self, n_components=2):
+    def __init__(self, n_components:int=2):
         self.lm = LinearRegression()
         self.n_components = n_components
         self.pca = PCA(n_components=self.n_components)
         self.ss = StandardScaler()
 
     def __name__(self):
-        pass
+        return self
 
-    def fit(self, X, y=None):
+    def fit(self, X: np.ndarray, y=None):
         scaledX = self.ss.fit_transform(X)
         xpca = self.pca.fit_transform(scaledX)
         self.lm.fit(xpca, y)
         return self
 
-    def predict(self, X, y=None):
+    def predict(self, X: np.ndarray, y=None):
         scaledX = self.ss.fit_transform(X)
         xpca = self.pca.fit_transform(scaledX)
         preds = self.lm.predict(xpca)
